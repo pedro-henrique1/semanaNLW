@@ -1,5 +1,6 @@
 :root {
   --title-color: #322153;
+  --primary-color: #34cb79;
 }
 * {
   margin: 0;
@@ -10,6 +11,7 @@ html {
 }
 body {
   background: #f0f0f5;
+  -webkit-font-smothing: antialiased;
 }
 
 a {
@@ -68,6 +70,64 @@ h6 {
   justify-content: center;
 }
 #page-home main h1 {
-  font-size: 54px;
-  color: var(--title-color);
+  font-size: 40px;
+  line-height: 38px;
+  margin-top: 24px;
+}
+#page-home main a {
+  width: 100%;
+  height: 72px;
+  margin-top: 40px;
+  max-width: 360px;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  background: var(--primary-color);
+  transition: 400ms;
+  font-weight: bold;
+  color: #fff;
+}
+#page-home main a:hover {
+  background-color: #2fb86e;
+}
+
+#page-home main a span {
+  width: 72px;
+  height: 72px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#page-home main a span::after {
+  content: "";
+  background-image: url(../assets/img/icones/search.svg);
+  width: 20px;
+  height: 20px;
+}
+#page-home main a strong {
+  flex: 1;
+  color: #fff;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  #page-home {
+    background-position-x: 70vw;
+  }
+  #page-home .content {
+    align-items: center;
+    text-align: center;
+  }
+  #page-home header a {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #page-home main {
+    align-items: center;
+  }
 }
