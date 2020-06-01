@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+#page-home {
+  background: url(../assets/img/icones/home-background.svg) no-repeat;
+}
+#page-home .content {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#page-home header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
