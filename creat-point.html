@@ -17,22 +17,69 @@
 
     <header>
 
-      <img id="logo-img" src="./assets/img/icones/logo.svg" alt="logo">
+      <img src="./assets/img/icones/logo.svg" alt="logo">
       <a href="http://google.com.br">
         <span></span>
         voltar apara home
       </a>
     </header>
 
-    <main>
-      <h1>Seu markplace <br> de coleta de resíduos</h1>
+    <form action="" method="">
+      <h1>Cadastro do ponto de coleta</h1>
+      <fieldset>
+        <legend>
+          <h2>Dados da entidade</h2>
+        </legend>
 
-      <p>ajudamos pessoas a encontrarem pontos <br> de coleta de forma eficiente</p>
+        <div class="field">
+          <label for="name">Nome da entidade</label>
+          <input type="text" name="name">
 
-      <a href="#"><span></span><strong>Pesquisar ponto de coleta</strong></a>
-    </main>
+        </div>
+        <div class="field-group">
+          <div class="field">
+            <label for="address">Endereço</label>
+            <input type="text" name="address">
+          </div>
+          <div class="field">
+            <label for="address2">Número/Complemento</label>
+            <input type="text" name="address2">
+          </div>
+        </div>
+
+
+        <div class="field-group">
+          <div class="field">
+            <label for="state">Estado</label>
+            <select name="uf">
+              <option value="">Selecione o estado</option>
+            </select>
+            <input type="hidden" name="state">
+          </div>
+
+          <div class="field">
+            <label for="city">Cidade</label>
+            <select name="city" disabled>
+              <option value="">Selecione a cidade</option>
+            </select>
+          </div>
+        </div>
+
+
+
+      </fieldset>
+
+
+      <legend>
+        <h2>Ítem de coleta</h2>
+      </legend>
+      <fieldset>
+
+      </fieldset>
+      <button type="submit">Cadastrar ponto de coleta</button>
+    </form>
   </div>
-
+  <script src="/assets/js/create.js"></script>
 </body>
 
 </html>
