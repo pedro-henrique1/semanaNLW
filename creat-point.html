@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/style/responsive.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
   <title>Criar ponto de coleta</title>
+  <link rel="shortcut icon" href="#" type="image/x-icon">
 </head>
 
 <body>
@@ -51,7 +52,7 @@
         <div class="field-group">
           <div class="field">
             <label for="state">Estado</label>
-            <select name="uf">
+            <select name="uf" required>
               <option value="">Selecione o estado</option>
             </select>
             <input type="hidden" name="state">
@@ -59,7 +60,7 @@
 
           <div class="field">
             <label for="city">Cidade</label>
-            <select name="city" disabled>
+            <select name="city" disabled required>
               <option value="">Selecione a cidade</option>
             </select>
           </div>
@@ -70,12 +71,40 @@
       </fieldset>
 
 
-      <legend>
-        <h2>Ítem de coleta</h2>
-      </legend>
       <fieldset>
+        <legend>
+          <h2>Ítem de coleta</h2>
+        </legend>
+        <div class="items-grid">
+          <li data-id="1"><img src="./assets/img/icones/lampadas.svg" alt="lampadas">
+            <span>Lampadas</span>
+          </li>
 
+          <li data-id="2"><img src="./assets/img/icones/baterias.svg" alt="Pilhas e bateria">
+            <span>Pilhas e bateria</span>
+          </li>
+
+          <li data-id="3"><img src="./assets/img/icones/papeis-papelao.svg" alt="papeis e papelão">
+            <span>papeis e papelão</span>
+          </li>
+
+          <li data-id="4"><img src="./assets/img/icones/eletronicos.svg" alt="resíduos eletonicos">
+            <span>resíduos eletonicos</span>
+          </li>
+
+          <li data-id="5"><img src="./assets/img/icones/organicos.svg" alt="resíduos orgãnicos">
+            <span>resíduos orgãnicos</span>
+          </li>
+
+          <li data-id="6"><img src="./assets/img/icones/oleo.svg" alt="oleo de cozinha">
+            <span>oleo de cozinha</span>
+          </li>
+
+        </div>
+        <input type="hidden" name="items">
       </fieldset>
+
+
       <button type="submit">Cadastrar ponto de coleta</button>
     </form>
   </div>
