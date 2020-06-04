@@ -49,6 +49,8 @@ for (let item of itemsToCollect) {
   item.addEventListener("click", handleSelectedItem)
 }
 
+const collectedItem = document.querySelector("input[name=items]")
+
 let selectItems = []
 function handleSelectedItem(event) {
   const itemLi = event.target
@@ -74,7 +76,7 @@ function handleSelectedItem(event) {
   }
   console.log(selectItems);
 
-
+  collectedItem.value = selectItems
 
 }
 

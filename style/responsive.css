@@ -8,12 +8,18 @@
   }
   #page-home header a {
     position: absolute;
-    bottom: 48px;
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
   }
   #page-home main {
     align-items: center;
+  }
+  #page-search-result .cards {
+    grid-template-columns: 1fr;
+  }
+  #page-search-result .cards img {
+    height: 250px;
   }
 }
 @media (min-width: 1700px) {
