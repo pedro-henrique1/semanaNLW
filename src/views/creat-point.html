@@ -1,108 +1,106 @@
-<!DOCTYPE html>
-<html lang="pt_br">
+{% extends "layout.html"%}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/style/style.css">
-  <link rel="stylesheet" href="/style/create-point.css">
-  <link rel="stylesheet" href="/style/responsive.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-  <title>Criar ponto de coleta</title>
-  <link rel="shortcut icon" href="#" type="image/x-icon">
+{% set pageId = "page-home" %}
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Criar ponto de coleta</title>
+
+<link rel="stylesheet" href="/style/style.css">
+
+<link rel="stylesheet" href="/style/create-point.css">
+
+<link rel="stylesheet" href="/style/responsive.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="#" type="image/x-icon">
+
 </head>
 
 <body>
-  <div id="page-creat-point">
+<div id="page-creat-point">
 
-    {%  include "partes/page-header.html" %}
+  {%  include "partes/page-header.html" %}
 
+  <form action="" method="">
+    <h1>Cadastro do ponto de coleta</h1>
+    <fieldset>
+      <legend>
+        <h2>Dados da entidade</h2>
+      </legend>
 
-    <form action="" method="">
-      <h1>Cadastro do ponto de coleta</h1>
-      <fieldset>
-        <legend>
-          <h2>Dados da entidade</h2>
-        </legend>
+      <div class="field">
+        <label for="name">Nome da entidade</label>
+        <input type="text" name="name">
+
+      </div>
+      <div class="field-group">
+        <div class="field">
+          <label for="address">Endereço</label>
+          <input type="text" name="address">
+        </div>
+        <div class="field">
+          <label for="address2">Número/Complemento</label>
+          <input type="text" name="address2">
+        </div>
+      </div>
+
+      <div class="field-group">
+        <div class="field">
+          <label for="state">Estado</label>
+          <select name="uf" required="required">
+            <option value="">Selecione o estado</option>
+          </select>
+          <input type="hidden" name="state">
+        </div>
 
         <div class="field">
-          <label for="name">Nome da entidade</label>
-          <input type="text" name="name">
-
+          <label for="city">Cidade</label>
+          <select name="city" disabled="disabled" required="required">
+            <option value="">Selecione a cidade</option>
+          </select>
         </div>
-        <div class="field-group">
-          <div class="field">
-            <label for="address">Endereço</label>
-            <input type="text" name="address">
-          </div>
-          <div class="field">
-            <label for="address2">Número/Complemento</label>
-            <input type="text" name="address2">
-          </div>
-        </div>
+      </div>
 
+    </fieldset>
 
-        <div class="field-group">
-          <div class="field">
-            <label for="state">Estado</label>
-            <select name="uf" required>
-              <option value="">Selecione o estado</option>
-            </select>
-            <input type="hidden" name="state">
-          </div>
+    <fieldset>
+      <legend>
+        <h2>Ítem de coleta</h2>
+      </legend>
+      <div class="items-grid">
+        <li data-id="1"><img src="./assets/img/icones/lampadas.svg" alt="lampadas">
+          <span>Lampadas</span>
+        </li>
 
-          <div class="field">
-            <label for="city">Cidade</label>
-            <select name="city" disabled required>
-              <option value="">Selecione a cidade</option>
-            </select>
-          </div>
-        </div>
+        <li data-id="2"><img src="./assets/img/icones/baterias.svg" alt="Pilhas e bateria">
+          <span>Pilhas e bateria</span>
+        </li>
 
+        <li data-id="3"><img src="./assets/img/icones/papeis-papelao.svg" alt="papeis e papelão">
+          <span>papeis e papelão</span>
+        </li>
 
+        <li data-id="4"><img src="./assets/img/icones/eletronicos.svg" alt="resíduos eletonicos">
+          <span>resíduos eletonicos</span>
+        </li>
 
-      </fieldset>
+        <li data-id="5"><img src="./assets/img/icones/organicos.svg" alt="resíduos orgãnicos">
+          <span>resíduos orgãnicos</span>
+        </li>
 
+        <li data-id="6"><img src="./assets/img/icones/oleo.svg" alt="oleo de cozinha">
+          <span>oleo de cozinha</span>
+        </li>
 
-      <fieldset>
-        <legend>
-          <h2>Ítem de coleta</h2>
-        </legend>
-        <div class="items-grid">
-          <li data-id="1"><img src="./assets/img/icones/lampadas.svg" alt="lampadas">
-            <span>Lampadas</span>
-          </li>
+      </div>
+      <input type="hidden" name="items">
+    </fieldset>
 
-          <li data-id="2"><img src="./assets/img/icones/baterias.svg" alt="Pilhas e bateria">
-            <span>Pilhas e bateria</span>
-          </li>
-
-          <li data-id="3"><img src="./assets/img/icones/papeis-papelao.svg" alt="papeis e papelão">
-            <span>papeis e papelão</span>
-          </li>
-
-          <li data-id="4"><img src="./assets/img/icones/eletronicos.svg" alt="resíduos eletonicos">
-            <span>resíduos eletonicos</span>
-          </li>
-
-          <li data-id="5"><img src="./assets/img/icones/organicos.svg" alt="resíduos orgãnicos">
-            <span>resíduos orgãnicos</span>
-          </li>
-
-          <li data-id="6"><img src="./assets/img/icones/oleo.svg" alt="oleo de cozinha">
-            <span>oleo de cozinha</span>
-          </li>
-
-        </div>
-        <input type="hidden" name="items">
-      </fieldset>
-
-
-      <button type="submit">Cadastrar ponto de coleta</button>
-    </form>
-  </div>
-  <script src="/assets/js/create.js"></script>
+    <button type="submit">Cadastrar ponto de coleta</button>
+  </form>
+</div>
+<script src="/assets/js/create.js"></script>
 </body>
 
 </html>

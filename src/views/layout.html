@@ -16,15 +16,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet"/>
 
     <link rel="stylesheet" href="/style/style.css">
-    {% block style %}
-      {#  #}
-    {% endblock style %}
+    {% block style %}{% endblock style %}
     <link rel="stylesheet" href="/style/responsive.css">
 
   </head>
 
   <body>
-    <div id="{{ bodyId }}"></div>
-    {% block content %}{% endblock content %}
+    <div id="{{ pageId }}">
+      {% block content %}{% endblock content %}
+    </div>
+
+    {% block modal %}{% endblock modal %}
+
+    {% block scripts %}
+
+      {#  #}
+
+    {% endblock scripts %}
+
   </body>
 </html>
