@@ -1,58 +1,39 @@
-<!DOCTYPE html>
-<html lang="pt_br">
+{% extends "layout.html" %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/style/style.css">
-  <link rel="stylesheet" href="/style/home.css">
-  <link rel="stylesheet" href="/style/modal.css">
-  <link rel="stylesheet" href="/style/responsive.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="#" type="image/x-icon">
-  <title>Document</title>
-</head>
+{% set bodyId = "page-home" %}
+{% block style %}
+  <link rel="stylesheet" href="/style/home.css"/>
+  <link rel="stylesheet" href="/style/modal.css"/>
+{% endblock style %}
 
-<body>
-  <div id="page-home">
-    <div class="content">
-      <header>
+{% block content %}
+  <div class="content">
+    <header>
+      <img id="logo-img" src="./assets/img/icones/logo.svg" alt="logo"/>
+      <a href="/">
+        <span></span>
+        Cadastra um ponto de coleta</a >
+    </header>
+    <main>
+      <h1>
+        Seu markplace
+        <br/>
+        de coleta de resíduos
+      </h1>
 
-        <img id="logo-img" src="./assets/img/icones/logo.svg" alt="logo">
-        <a href="/">
-          <span></span>
-          Cadastra um ponto de coleta</a>
-      </header>
-      <main>
-        <h1>Seu markplace <br> de coleta de resíduos</h1>
+      <p>
+        ajudamos pessoas a encontrarem pontos
+        <br/>
+        de coleta de forma eficiente
+      </p>
 
-        <p>ajudamos pessoas a encontrarem pontos <br> de coleta de forma eficiente</p>
-
-        <a href="#"><span></span><strong>Pesquisar ponto de coleta</strong></a>
-      </main>
-    </div>
+      <a href="#">
+        <span></span>
+        <strong>Pesquisar ponto de coleta</strong>
+      </a >
+    </main>
   </div>
+{% endblock content %}
 
-  <div id="modal" class="hide">
-    <div class="content">
-      <div class="header">
-        <h1>Ponto para coleta</h1>
-        <a href="#">Fechar</a>
-      </div>
-      <form action="/search-result.html">
-        <label for="search">Cidade</label>
-
-        <div class="search filter">
-          <input type="text" name="search" placeholder="Pesquise por cidade">
-          <button>
-            <img src="/assets/img/icones/search.svg" alt="botão">
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-  <script src="./assets/js/index.js"></script>
-</body>
-
-</html>
+{% include "partes/modal.html" %}
+<script src="./assets/js/index.js"></script>
