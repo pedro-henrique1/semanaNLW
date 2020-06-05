@@ -9,7 +9,7 @@ nunjunck.configure("src/views", {
   noCache: true
 });
 
-app.get("/", (_req, res) => {
+app.get("/", (req, res) => {
   return res.render("index.html");
 });
 app.get("/creat-point.html", (req, res) => {

@@ -1,27 +1,16 @@
 {% extends "layout.html"%}
 
-{% set pageId = "page-home" %}
+{% set pageId = "page-create-point" %}
 
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Criar ponto de coleta</title>
+{% block title %}
+  <title>Criar ponto de coleta</title>
+{% endblock title %}
 
-<link rel="stylesheet" href="/style/style.css">
+{% block style %}
+  <link rel="stylesheet" href="/style/create-point.css">
+{% endblock style %}
 
-<link rel="stylesheet" href="/style/create-point.css">
-
-<link rel="stylesheet" href="/style/responsive.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-
-<link rel="shortcut icon" href="#" type="image/x-icon">
-
-</head>
-
-<body>
-<div id="page-creat-point">
-
-  {%  include "partes/page-header.html" %}
-
+{% block content %}
   <form action="" method="">
     <h1>Cadastro do ponto de coleta</h1>
     <fieldset>
@@ -34,6 +23,18 @@
         <input type="text" name="name">
 
       </div>
+
+      <div class="field-group">
+        <div class="field">
+          <label for="address">Nome da intidade</label>
+          <input type="text" name="name" required="required">
+        </div>
+        <div class="field">
+          <label for="address2">Imagem da intidade</label>
+          <input type="url" name="image" required="required" placeholder="http://">
+        </div>
+      </div>
+
       <div class="field-group">
         <div class="field">
           <label for="address">Endereço</label>
@@ -67,6 +68,7 @@
     <fieldset>
       <legend>
         <h2>Ítem de coleta</h2>
+        <span>Selecione um ou mais items abaixo</span>
       </legend>
       <div class="items-grid">
         <li data-id="1"><img src="./assets/img/icones/lampadas.svg" alt="lampadas">
@@ -99,8 +101,8 @@
 
     <button type="submit">Cadastrar ponto de coleta</button>
   </form>
-</div>
-<script src="/assets/js/create.js"></script>
-</body>
+{% endblock content %}
 
-</html>
+{% block scripts %}
+  <script src="/assets/js/create.js"></script>
+{% endblock scripts %}
