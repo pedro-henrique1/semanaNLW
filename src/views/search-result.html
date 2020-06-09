@@ -1,47 +1,34 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% set pageId = "page-search-result" %} {% block
+title %}
+<title>Criar ponto de coleta</title>
+{% endblock title %} {% block style %}
+<link rel="stylesheet" href="/style/search-result.css" />
 
-{% set pageId = "page-search-result" %}
+{% endblock style %} {% block content %} {% include "partes/page-header.html" %}
+<main>
+  <h4><strong>{{total}} pontos </strong>encontrado</h4>
 
-{% block title %}
-  <title>Criar ponto de coleta</title>
-{% endblock title %}
-{% block style %}
-  <link rel="stylesheet" href="/style/search-result.css">
+  {% if total > 0 %}
+  <div class="cards">
+    {% for place in places %}
+    <div class="card">
+      <img src="{{place.image}}" alt="{{place.name}}" />
+      <h1>{{place.name}}</h1>
 
-{% endblock style %}
+      <h3>{{place.items}}</h3>
+      <p>
+        {{place.city}}, {{place.state}}<br />
 
-{% block content %}
-  {%  include "partes/page-header.html" %}
-  <main>
-    <h4>
-      <strong>2 pontos</strong>encontrado
-    </h4>
-
-    <div class="cards">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=801&q=80" alt="Papersider">
-        <h1>Papersider</h1>
-        <h3>Pepéis e Papelão</h3>
-        <p>
-          Rio do Sul, Santa Catarina<br/>
-          Guilherme Gemballa, Jardmin América
-          <br/>
-          Número 260
-        </p>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Papersider">
-        <h1>Papersider</h1>
-        <h3>Pepéis e Papelão</h3>
-        <p>
-          Rio do Sul, Santa Catarina<br/>
-          Guilherme Gemballa, Jardmin América
-          <br/>
-          Número 260
-        </p>
-      </div>
+        {{place.address}}
+        <br />
+        {{place.address2}}
+      </p>
     </div>
+    {% endfor %}
+  </div>
 
-  </main>
+  {% else %}
+  <h4><strong>Nenhum </strong> local não encontrado</h4>
+  {% endif %}
+</main>
 {% endblock content %}
