@@ -3,7 +3,9 @@
 <h1 align="center">Ecoleta</h1>
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/pedro-henrique1/semanaNLW)
-
+![GitHub](https://img.shields.io/github/license/pedro-henrique1/semanaNLW)
+![GitHub language count](https://img.shields.io/github/languages/count/pedro-henrique1/semanaNLW)
+![GitHub top language](https://img.shields.io/github/languages/top/pedro-henrique1/semanaNLW)
 <br>
 
 <p align="center">A aplicação foi feita na semana NLW da rocketseat</p>
