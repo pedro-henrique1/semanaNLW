@@ -50,7 +50,7 @@ além de selecionar um ou mais ítens de coleta:
 ## ⚙️Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).<br>
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 <br>
@@ -80,4 +80,4 @@ $ npm start
 
 Este projeto está sob a licença MIT. Consulte a [LICENÇA](/LICENSE) para obter mais informações.
 
-feito com ❤️ por Pedro Henrique 👏🏼. Entre em [contato](https://www.linkedin.com/in/pedro-henrique-silva-rodrigues-0544ab199/)
+feito com ❤️ por Pedro Henrique 👏🏼.<br> Entre em [contato](https://www.linkedin.com/in/pedro-henrique-silva-rodrigues-0544ab199/)
