@@ -55,7 +55,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 <br>
 
-# 🎉 como executar o projeto
+# 🎉 Como executar o projeto
 
 ```bash
 # Clone este repositório
