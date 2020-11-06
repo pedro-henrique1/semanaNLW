@@ -19,11 +19,11 @@
   "homepage": "https://github.com/pedro-henrique1/bootcampNLW#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nunjucks": "^3.2.1",
-    "sqlite3": "^4.2.0",
-    "sweetalert": "^2.1.2"
+    "npm-check": "^5.9.2",
+    "nunjucks": "^3.2.2",
+    "sqlite3": "^5.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.6"
   }
 }

@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-
+require('npm-check')
 const db = require("./database/db");
 
 app.use(express.static("public"));
@@ -45,7 +45,7 @@ app.post("/save", function(req, res) {
   function afterInsretData(err) {
     if (err) {
       return res.send("Erro no cadastro");
-      console.log(err);
+     
     }
     console.log("Cadasstro com sucesso");
     console.log(this);
@@ -56,7 +56,7 @@ app.post("/save", function(req, res) {
 
 app.get("/search", (req, res) => {
   const search = req.query.search;
-  if (search == "") {
+  if (search === "") {
     return res.render("search-results.html", { total: 0 });
   }
 
